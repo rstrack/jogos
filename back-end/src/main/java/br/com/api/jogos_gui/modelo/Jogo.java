@@ -22,7 +22,7 @@ public class Jogo {
     private int id;
 
     @Column
-    private String nome;
+    private String titulo;
 
     @Column
     private double valor;
@@ -32,14 +32,14 @@ public class Jogo {
 
     public Jogo() {
         this.id = 0;
-        this.nome = "";
+        this.titulo = "";
         this.valor = 0.0;
         this.genero = new Genero();
     }
 
-    public Jogo(int id, String nome, double valor, Genero genero) {
+    public Jogo(int id, String titulo, double valor, Genero genero) {
         this.id = id;
-        this.nome = nome;
+        this.titulo = titulo;
         this.valor = valor;
         this.genero = genero;
     }

@@ -21,20 +21,20 @@ public class Genero {
     private int id;
 
     @Column
-    private String descricao;
+    private String nome;
 
     @Column
     private int classificacaoIndicativa;
 
     public Genero() {
         this.id = 0;
-        this.descricao = "";
+        this.nome = "";
         this.classificacaoIndicativa = 0;
     }
 
-    public Genero(int id, String descricao, int classificacaoIndicativa) {
+    public Genero(int id, String nome, int classificacaoIndicativa) {
         this.id = id;
-        this.descricao = descricao;
+        this.nome = nome;
         this.classificacaoIndicativa = classificacaoIndicativa;
     }
 }

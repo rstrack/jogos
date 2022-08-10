@@ -13,10 +13,9 @@ import br.com.api.jogos_gui.modelo.Genero;
 @Transactional
 @Qualifier("generos")
 @Repository
-
 public interface GeneroRepository extends JpaRepository<Genero, Long>{
 
     List<Genero> findById(int id);
 
-    List<Genero> findByTituloContaining(String nome);
+    List<Genero> findByNomeContaining(String nome);
 }

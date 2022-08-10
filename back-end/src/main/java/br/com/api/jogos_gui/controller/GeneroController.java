@@ -41,7 +41,7 @@ public class GeneroController {
             if (nome == null)
                 rep.findAll().forEach(listaGeneros::add);
             else
-                rep.findByTituloContaining(nome).forEach(listaGeneros::add);
+                rep.findByNomeContaining(nome).forEach(listaGeneros::add);
 
             if (listaGeneros.isEmpty())
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -59,7 +59,7 @@ public class GeneroController {
     @PostMapping("/generos")
     public ResponseEntity<Genero> createGenero(@RequestBody Genero genero) {
         try {
-            Genero _j = rep.save(new Genero(genero.getId(), genero.getDescricao(), genero.getClassificacaoIndicativa()));
+            Genero _j = rep.save(new Genero(genero.getId(), genero.getNome(), genero.getClassificacaoIndicativa()));
 
             return new ResponseEntity<>(_j, HttpStatus.CREATED);
 
@@ -91,7 +91,7 @@ public class GeneroController {
 
         if (data.isPresent()) {
             Genero _g = data.get();
-            _g.setDescricao(g.getDescricao());
+            _g.setNome(g.getNome());
             _g.setClassificacaoIndicativa(g.getClassificacaoIndicativa());
 
             return new ResponseEntity<>(rep.save(_g), HttpStatus.OK);

@@ -59,7 +59,7 @@ public class JogoController {
     @PostMapping("/jogos")
     public ResponseEntity<Jogo> createJogo(@RequestBody Jogo jogo) {
         try {
-            Jogo _j = rep.save(new Jogo(jogo.getId(), jogo.getNome(), jogo.getValor(), jogo.getGenero()));
+            Jogo _j = rep.save(new Jogo(jogo.getId(), jogo.getTitulo(), jogo.getValor(), jogo.getGenero()));
 
             return new ResponseEntity<>(_j, HttpStatus.CREATED);
 
@@ -91,7 +91,7 @@ public class JogoController {
 
         if (data.isPresent()) {
             Jogo _j = data.get();
-            _j.setNome(j.getNome());
+            _j.setTitulo(j.getTitulo());
             _j.setValor(j.getValor());
             _j.setGenero(j.getGenero());
 

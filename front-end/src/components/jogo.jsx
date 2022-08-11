@@ -97,7 +97,7 @@ class Jogo extends Component {
     JogoDataService.delete(this.state.JogoAtual.id)
       .then(response => {
         console.log(response.data);
-        this.props.history.push('/list')
+        this.props.history.push('/api/jogos')
       })
       .catch(e => {
         console.log(e);

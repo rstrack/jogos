@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-JogosGuiApplication<jogos_gui>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.com.api.jogos_gui.JogosGuiApplication",
+            "projectName": "jogos_gui",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

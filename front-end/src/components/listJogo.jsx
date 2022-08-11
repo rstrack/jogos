@@ -17,7 +17,6 @@ export default class ListJogo extends Component {
       jogos: [],
       jogoSel: null,
       indice: -1,
-      titulo: ""
     };
   }
 
@@ -151,19 +150,19 @@ export default class ListJogo extends Component {
               </div>
               <div>
                 <label>
-                  <strong>Resumo:</strong>
+                  <strong>Gênero:</strong>
                 </label>{" "}
-                {jogoSel.resumo}
+                {jogoSel.genero.nome}
               </div>
               <div>
                 <label>
-                  <strong>Status:</strong>
+                  <strong>Valor:</strong>
                 </label>{" "}
-                {jogoSel.publicado ? "Publicado" : "Pendente"}
+                {jogoSel.valor}
               </div>
 
               <Link
-                to={"/list/" + jogoSel.id}
+                to={"/api/jogos/" + jogoSel.id}
                 className="btn btn-sm btn-warning"
                 role="button"
                 >

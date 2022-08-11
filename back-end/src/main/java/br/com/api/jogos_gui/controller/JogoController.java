@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.api.jogos_gui.modelo.Jogo;
 import br.com.api.jogos_gui.repository.JogoRepository;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:5173")
 
 @RestController
 @RequestMapping("/api")

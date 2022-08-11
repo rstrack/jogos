@@ -17,7 +17,7 @@ function App() {
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <Link to={'/list'} className="navbar-brand">
+            <Link to={'/api/jogos/'} className="navbar-brand">
               <b>
                 Ciro Games
               </b>
@@ -29,10 +29,10 @@ function App() {
                     Listar
                   </a>
                   <ul class="dropdown-menu dropdown-menu-light bg-danger" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <Link to={"/jogos/list"} className="dropdown-item">
+                    <Link to={"/api/jogos/"} className="dropdown-item">
                       Jogos
                     </Link>
-                    <Link to={'/generos/list'} className="dropdown-item">
+                    <Link to={'/api/generos/'} className="dropdown-item">
                       Gêneros
                     </Link>
                   
@@ -43,10 +43,10 @@ function App() {
                     Adicionar
                   </a>
                   <ul class="dropdown-menu dropdown-menu-light bg-danger" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <Link to={"/jogos/add"} className="dropdown-item">
+                    <Link to={"/api/jogos/add"} className="dropdown-item">
                       Jogos
                     </Link>
-                    <Link to={'/generos/add'} className="dropdown-item">
+                    <Link to={'/api/generos/add'} className="dropdown-item">
                       Gêneros
                     </Link>
                   </ul>
@@ -58,9 +58,9 @@ function App() {
         <div className="container mt-3">
           <Routes>
             <Route element={<ListJogo />} path="/" />
-            <Route element={<ListJogo />} path="/jogos/list" />
-            <Route element={<AddJogo />} path="/jogos/add" />
-            <Route element={<Jogo />} path="/jogos/list/:id" />
+            <Route element={<ListJogo />} path="/api/jogos/" />
+            <Route element={<AddJogo />} path="/api/jogos/add" />
+            <Route element={<Jogo />} path="/api/jogos/:id" />
           </Routes>
         </div>
       </BrowserRouter>

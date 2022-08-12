@@ -2,31 +2,12 @@ import React, { useState, useEffect } from "react";
 import JogoDataService from "../services/jogoDataService";
 import { Link } from "react-router-dom";
 
-<<<<<<< HEAD
 function listJogo(){
   const stateJogo = {
-    jogos: [""],
+    jogos: [],
     jogoSel: null,
     indice: -1,
     titulo: ""
-=======
-
-export default class ListJogo extends Component {
-  constructor(props) {
-    super(props);
-    this.onChangeSearchTitulo = this.onChangeSearchTitulo.bind(this);
-    this.retrieveJogos = this.retrieveJogos.bind(this);
-    this.refreshList = this.refreshList.bind(this);
-    this.setJogoSel = this.setJogoSel.bind(this);
-    this.removeAll = this.removeAll.bind(this);
-    this.searchTitulo = this.searchTitulo.bind(this);
-
-    this.state = {
-      jogos: [],
-      jogoSel: null,
-      indice: -1,
-    };
->>>>>>> c01d870a4e77b0931449a18945f1ae6b9c584308
   }
 
   const [values, setValues] = useState(stateJogo)
@@ -135,72 +116,6 @@ export default class ListJogo extends Component {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-        <div className="col-md-6">
-          <h4>Jogos</h4>
-
-          <ul className="list-group">
-            {jogos &&
-              jogos.map((jogo, index) => (
-                <li
-                  className={
-                    "list-group-item " +
-                    (index === indice ? "active" : "")
-                  }
-                  onClick={() => this.setJogoSel(jogo, index)}
-                  key={index}
-                >
-                  {jogo.titulo}
-                </li>
-              ))}
-          </ul>
-
-          <button
-            className="m-1 btn btn-sm btn-danger"
-            onClick={this.removeAll}>Excluir todos
-          </button>
-        </div>
-        <div className="col-md-6">
-          {jogoSel ? (
-            <div>
-              <h4>&nbsp;</h4>
-              <div>
-                <label>
-                  <strong>Título:</strong>
-                </label>{" "}
-                {jogoSel.titulo}
-              </div>
-              <div>
-                <label>
-                  <strong>Gênero:</strong>
-                </label>{" "}
-                {jogoSel.genero.nome}
-              </div>
-              <div>
-                <label>
-                  <strong>Valor:</strong>
-                </label>{" "}
-                {jogoSel.valor}
-              </div>
-
-              <Link
-                to={"/api/jogos/" + jogoSel.id}
-                className="btn btn-sm btn-warning"
-                role="button"
-                >
-                Editar
-              </Link>
-            </div>
-          ) : (
-            <div>
-              <h4>&nbsp;</h4>
-              
-              <p><i>Para detalhes, selecionar um jogo.</i></p>
-            </div>
-          )}
-        </div>
->>>>>>> c01d870a4e77b0931449a18945f1ae6b9c584308
       </div>
       <div className="col-md-6">
         <h4>Jogos</h4>

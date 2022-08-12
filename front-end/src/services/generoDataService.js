@@ -2,27 +2,27 @@ import http from "../http-common";
 
 class GeneroDataService {
   getAll() {
-    return http.get("/api/generos");
+    return http.get("/generos");
   }
 
   get(id) {
-    return http.get(`/api/generos/${id}`);
+    return http.get(`/generos/${id}`);
   }
 
   create(data) {
-    return http.post("/api/generos", data);
+    return http.post("/generos", data);
   }
 
   update(id, data) {
-    return http.put(`/api/generos/${id}`, data);
+    return http.put(`/generos/${id}`, data);
   }
 
   delete(id) {
-    return http.delete(`/api/generos/${id}`);
+    return http.delete(`/generos/${id}`);
   }
 
   deleteAll() {
-    return http.delete(`/api/generos`);
+    return http.delete(`/generos`);
   }
 }
 

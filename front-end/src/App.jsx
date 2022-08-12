@@ -31,9 +31,6 @@ function App() {
                     <Link to={"/jogos/list"} className="dropdown-item">
                       Jogos
                     </Link>
-                    <Link to={'/generos/list'} className="dropdown-item">
-                      Gêneros
-                    </Link>
                   
                   </ul>
                 </li>
@@ -44,9 +41,6 @@ function App() {
                   <ul className="dropdown-menu dropdown-menu-light bg-danger" aria-labelledby="navbarDarkDropdownMenuLink">
                     <Link to={"/jogos/add"} className="dropdown-item">
                       Jogos
-                    </Link>
-                    <Link to={'/generos/add'} className="dropdown-item">
-                      Gêneros
                     </Link>
                   </ul>
                 </li>
@@ -59,10 +53,10 @@ function App() {
             <Route element={<ListJogo />} path="/" />
             <Route element={<ListJogo />} path="/jogos/list" />
             <Route element={<AddJogo />} path="/jogos/add" />
-            <Route element={<Jogo />} path="/jogos/list/:id" />
+            <Route element={<Jogo />} path="/jogos/edit/:id" />
           </Routes>
         </div>
       </BrowserRouter>
     </div>
   )
-}
+} export default App

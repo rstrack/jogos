@@ -95,7 +95,11 @@ function Jogo(){
     JogoDataService.delete(values.JogoAtual.id)
       .then(response => {
         console.log(response.data);
+<<<<<<< HEAD
         navigate("/")
+=======
+        this.props.history.push('/api/jogos')
+>>>>>>> c01d870a4e77b0931449a18945f1ae6b9c584308
       })
       .catch(e => {
         console.log(e);

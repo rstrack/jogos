@@ -59,12 +59,10 @@ function App() {
             <Route element={<ListJogo />} path="/" />
             <Route element={<ListJogo />} path="/jogos/list" />
             <Route element={<AddJogo />} path="/jogos/add" />
-            <Route element={<Jogo/>} path="/jogos/edit/:id" />
+            <Route element={<Jogo />} path="/jogos/list/:id" />
           </Routes>
         </div>
       </BrowserRouter>
     </div>
   )
 }
-
-export default App

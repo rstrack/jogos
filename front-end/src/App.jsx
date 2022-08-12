@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div>
-      <Favicon src="https://lh3.googleusercontent.com/pw/AL9nZEWQlHchilg8nTGwlUSbokoX1w-KzodbMv_CvwxAeEUJ4Wa0YJOFpPMXYTRFDVPN0A2yI7tIY2Gg4pVKaHjV9jV-oexm_4bHyYCAECh5t3LvHe8WIE2ukYURXDYj4xo8DkmgQaJ-YEMtU2fKsxDApLU=w500-h250-no?authuser=0"></Favicon>
+      <Favicon url="https://lh3.googleusercontent.com/pw/AL9nZEWQlHchilg8nTGwlUSbokoX1w-KzodbMv_CvwxAeEUJ4Wa0YJOFpPMXYTRFDVPN0A2yI7tIY2Gg4pVKaHjV9jV-oexm_4bHyYCAECh5t3LvHe8WIE2ukYURXDYj4xo8DkmgQaJ-YEMtU2fKsxDApLU=w500-h250-no?authuser=0"></Favicon>
       <BrowserRouter>
       <nav className="navbar navbar-expand-lg ">
           <div className="container">
@@ -19,7 +19,7 @@ function App() {
               <span className="navbar-toggler-icon"></span>
             </button>
             <Link to={'/jogos/list'} className="navbar-brand">
-              <img classs="img-responsive" width="130px" height="" src="https://lh3.googleusercontent.com/pw/AL9nZEWQlHchilg8nTGwlUSbokoX1w-KzodbMv_CvwxAeEUJ4Wa0YJOFpPMXYTRFDVPN0A2yI7tIY2Gg4pVKaHjV9jV-oexm_4bHyYCAECh5t3LvHe8WIE2ukYURXDYj4xo8DkmgQaJ-YEMtU2fKsxDApLU=w500-h250-no?authuser=0"/>
+              <img className="img-responsive" width="130px" height="" src="https://lh3.googleusercontent.com/pw/AL9nZEWQlHchilg8nTGwlUSbokoX1w-KzodbMv_CvwxAeEUJ4Wa0YJOFpPMXYTRFDVPN0A2yI7tIY2Gg4pVKaHjV9jV-oexm_4bHyYCAECh5t3LvHe8WIE2ukYURXDYj4xo8DkmgQaJ-YEMtU2fKsxDApLU=w500-h250-no?authuser=0"/>
             </Link>
             <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
               <ul className='navbar-nav'>

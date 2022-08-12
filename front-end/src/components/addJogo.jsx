@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import JogoDataService from "../services/jogoDataService";
 
 const AddJogo = () => {
+
   const navigate = useNavigate();
   
   const stateJogo = {
@@ -11,6 +12,8 @@ const AddJogo = () => {
     genero: "Ação", 
     valor:""
   }
+
+  const listaGeneros = ["Ação","Aventura","Battle Royale","Corrida","Estratégia","Luta","MMO","MOBA","RPG","Simulação","Sobrevivência"]
 
   const [values, setValues] = useState(stateJogo)
 
@@ -57,18 +60,12 @@ const AddJogo = () => {
           onChange={handlerOnChange}
           name="genero"
         >
-          <option value="Ação">Ação</option>
-          <option value="Aventura">Aventura</option>
-          <option value="Battle Royale">Battle Royale</option>
-          <option value="Corrida">Corrida</option>
-          <option value="Estratégia">Estratégia</option>
-          <option value="FPS">FPS</option>
-          <option value="Luta">Luta</option>
-          <option value="MMO">MMO</option>
-          <option value="MOBA">MOBA</option>
-          <option value="RPG">RPG</option>
-          <option value="Simulação">Simulação</option>
-          <option value="Sobrevivência">Sobrevivência</option>
+          {listaGeneros.map((genero) =>{
+            return <option key={genero}>{genero}</option>
+          })
+
+          }
+          
         </select>
             
       </div>

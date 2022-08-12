@@ -12,7 +12,22 @@
   max-width: 400px;
   margin: auto;
 }
-  
+ 
+.navbar{
+  background-color:#1c0f3b;
+  color: #1eb588;
+}
+.nav-link{
+  color: #1eb588;
+  border-radius: 3px;
+}
+.dropdown-menu{
+  background-color:#1c0f3b;
+}
+.dropdown-item{
+  color: #1eb588;
+  border-radius: 3px;
+}
 .edit-form {
   max-width: 300px;
   margin: auto;
@@ -30,4 +45,14 @@ button {
 .navbar-collapse{
   font-size: 14pt;
   font-weight: bold;
+}
+.nav-link:hover, .nav-link:focus, .dropdown-item:hover, .dropdown-item:focus{
+  color: #1eb588;
+  box-shadow: 0 0 0 25px rgba(255, 255, 255, 0);
+  animation: pulsar 1s;
+}
+@keyframes pulsar{
+  0%{
+      box-shadow: 0 0 0 0 #1eb588;
+  }
 }

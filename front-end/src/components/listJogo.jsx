@@ -171,12 +171,12 @@ function listJogo(){
               >
               Editar
             </Link>
-            {/* <button 
+            <button 
               className="m-1 btn btn-sm btn-danger"
-              onClick={() => deleteByID(jogoSel.id)}
+              onClick={() => deleteByID(values.jogoSel.id)}
             >
               Deletar
-            </button> */}
+            </button>
           </div>
         ) : (
           <div>

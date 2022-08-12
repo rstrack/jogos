@@ -1,6 +1,7 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css'
+import Favicon from "react-favicon"
 import { Routes, BrowserRouter, Route, Link } from 'react-router-dom';
 import ListJogo from './components/listJogo';
 import AddJogo from './components/addJogo';
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <div>
+      <Favicon src="src/images/favicon.png"></Favicon>
       <BrowserRouter>
       <nav className="navbar navbar-expand-lg navbar-light bg-danger">
           <div className="container">

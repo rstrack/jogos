@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.api.jogos_gui.modelo.Jogo;
 import br.com.api.jogos_gui.repository.JogoRepository;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 
 @RestController
 @RequestMapping("/api")
@@ -59,7 +59,7 @@ public class JogoController {
     @PostMapping("/jogos")
     public ResponseEntity<Jogo> createJogo(@RequestBody Jogo jogo) {
         try {
-            Jogo _j = rep.save(new Jogo(jogo.getId(), jogo.getTitulo(), jogo.getValor(), jogo.getGenero()));
+            Jogo _j = rep.save(new Jogo(jogo.getTitulo(), jogo.getValor(), jogo.getGenero()));
 
             return new ResponseEntity<>(_j, HttpStatus.CREATED);
 
@@ -73,7 +73,7 @@ public class JogoController {
      * GET /api/jogos/:id : listar artigo dado um id
      */
     @GetMapping("/jogos/{id}")
-    public ResponseEntity<Jogo> getJogoById(@PathVariable("id") long id) {
+    public ResponseEntity<Jogo> getJogoById(@PathVariable("id") Long id) {
         Optional<Jogo> data = rep.findById(id);
 
         if (data.isPresent())
@@ -86,7 +86,7 @@ public class JogoController {
      * PUT /api/jogos/:id : atualizar artigo dado um id
      */
     @PutMapping("/jogos/{id}")
-    public ResponseEntity<Jogo> updateJogo(@PathVariable("id") long id, @RequestBody Jogo j) {
+    public ResponseEntity<Jogo> updateJogo(@PathVariable("id") Long id, @RequestBody Jogo j) {
         Optional<Jogo> data = rep.findById(id);
 
         if (data.isPresent()) {
@@ -105,9 +105,11 @@ public class JogoController {
      * DEL /api/jogos/:id : remover artigo dado um id
      */
     @DeleteMapping("/jogos/{id}")
-    public ResponseEntity<HttpStatus> deleteJogo(@PathVariable("id") long id) {
+    public ResponseEntity<HttpStatus> deleteJogo(@PathVariable("id") Long id) {
         try {
-            rep.deleteById(id);
+            Optional<Jogo> j = rep.findById(id);
+            if (j.isPresent())
+                rep.delete(j.get());
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 
         } catch (Exception e) {

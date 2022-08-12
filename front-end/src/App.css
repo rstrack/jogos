@@ -1,19 +1,33 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .list {
     text-align: left;
     max-width: 750px;
     margin: auto;
-  }
+}
   
-  .submit-form {
-    max-width: 400px;
-    margin: auto;
-  }
+.submit-form {
+  max-width: 400px;
+  margin: auto;
+}
   
-  .edit-form {
-    max-width: 300px;
-    margin: auto;
-  }
+.edit-form {
+  max-width: 300px;
+  margin: auto;
+}
   
-  button {
-    margin: 0 7px;
-  }
+button {
+  margin: 0 7px;
+}
+
+.navbar-brand{
+  font-size: 26pt;
+  padding-right: 4rem;
+}
+
+.navbar-collapse{
+  font-size: 14pt;
+  font-weight: bold;
+}

@@ -18,12 +18,12 @@ function listJogo(){
   
 
   const handlerOnChange = e => {
-    let {name, value} = e.target
+    let {value} = e.target
 
-    setValues(prevState => ({
-        ...prevState,
-        [name]: value
-    }))
+    setValues({
+        ...values,
+        titulo: value
+    })
   }
 
   const retrieveJogos = () => {
@@ -42,6 +42,7 @@ function listJogo(){
   const refreshList = () => {
     retrieveJogos()
     setValues({
+      ...values,
       jogoSel: null,
       indice: -1
     })
@@ -49,6 +50,7 @@ function listJogo(){
 
   const setJogoSel = (jogo, index) => {
     setValues({
+      ...values,
       jogoSel: jogo,
       indice: index
     })
@@ -79,6 +81,7 @@ function listJogo(){
   const searchTitulo = () => {
     console.log(values.titulo)
     setValues({
+      ...values,
       jogoSel: null,
       indice: -1
     });
@@ -86,6 +89,7 @@ function listJogo(){
     JogoDataService.findByTitulo(values.titulo)
       .then(response => {
         setValues({
+          ...values,
           jogos: response.data
         });
         console.log(response.data);
@@ -100,7 +104,7 @@ function listJogo(){
       <div className="col-md-8">
         <div className="input-group mb-3">
           <input
-            type="text"
+
             className="form-control"
             placeholder="Buscar por título"
             value={values.titulo}

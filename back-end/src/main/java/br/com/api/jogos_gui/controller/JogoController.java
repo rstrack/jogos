@@ -34,14 +34,14 @@ public class JogoController {
      * GET /api/jogos : listar todos os jogos
      */
     @GetMapping("/jogos")
-    public ResponseEntity<List<Jogo>> getAllJogos(@RequestParam(required = false) String nome) {
+    public ResponseEntity<List<Jogo>> getAllJogos(@RequestParam(required = false) String titulo) {
         try {
             List<Jogo> listaJogos = new ArrayList<Jogo>();
 
-            if (nome == null)
+            if (titulo == null)
                 rep.findAll().forEach(listaJogos::add);
             else
-                rep.findByTituloContaining(nome).forEach(listaJogos::add);
+                rep.findByTituloContaining(titulo).forEach(listaJogos::add);
 
             if (listaJogos.isEmpty())
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import JogoDataService from "../services/jogoDataService";
@@ -30,7 +30,7 @@ const AddJogo = () => {
     JogoDataService.create(values)
       .then(response => {
         console.log(response.data)
-        navigate("/jogos/list")
+        navigate("/")
       })
       .catch(e => {
         console.log(e);
@@ -63,7 +63,6 @@ const AddJogo = () => {
           {listaGeneros.map((genero) =>{
             return <option key={genero}>{genero}</option>
           })
-
           }
           
         </select>

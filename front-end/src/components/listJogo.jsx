@@ -30,6 +30,7 @@ function listJogo(){
     JogoDataService.getAll()
       .then(response => {
         setValues({
+          ...values,
           jogos: response.data
         })
         console.log(response.data)
@@ -79,7 +80,6 @@ function listJogo(){
   }
 
   const searchTitulo = () => {
-    console.log(values.titulo)
     setValues({
       ...values,
       jogoSel: null,
@@ -104,7 +104,6 @@ function listJogo(){
       <div className="col-md-8">
         <div className="input-group mb-3">
           <input
-
             className="form-control"
             placeholder="Buscar por título"
             value={values.titulo}
@@ -114,7 +113,6 @@ function listJogo(){
             <button
               className="btn btn-outline-secondary"
               onClick={searchTitulo}
-            
             >
               Buscar
             </button>

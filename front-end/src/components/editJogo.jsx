@@ -1,9 +1,9 @@
-import React, { Component, useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import JogoDataService from "../services/jogoDataService";
 
 import { useNavigate, useParams } from 'react-router-dom';
 
-function Jogo(props){
+function EditJogo(){
 
   const stateJogo = {
     mensagem: "",
@@ -162,4 +162,4 @@ function Jogo(props){
     </div>
   );
 }
-export default Jogo;
+export default EditJogo;

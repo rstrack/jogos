@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import JogoDataService from "../services/jogoDataService";
 
-const AddJogo = () => {
+function AddJogo() {
 
   const navigate = useNavigate();
   
@@ -18,7 +18,7 @@ const AddJogo = () => {
   const [values, setValues] = useState(stateJogo)
 
   const handlerOnChange = e => {
-    let {name, value} = e.target
+    const {name, value} = e.target
 
     setValues(prevState => ({
       ...prevState,

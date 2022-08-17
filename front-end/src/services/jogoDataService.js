@@ -1,5 +1,7 @@
 import http from "../http-common";
 
+//caminho base definido em http-common.js -> http://localhost:8080/api
+
 class JogoDataService {
   getAll() {
     return http.get("/jogos");

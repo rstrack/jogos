@@ -113,8 +113,8 @@ function listJogo(){
           <div className="input-group-append">
             <button
               className="btn btn-outline-secondary"
-              type="button"
               onClick={searchTitulo}
+            
             >
               Buscar
             </button>

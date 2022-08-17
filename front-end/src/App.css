@@ -51,8 +51,40 @@ button {
   box-shadow: 0 0 0 25px rgba(255, 255, 255, 0);
   animation: pulsar 1s;
 }
+.btn-outline-secondary{
+  background-color:#1c0f3b;
+  color: #1eb588;
+  border-radius: 3px;
+}
+.btn-outline-secondary:hover,.btn-outline-secondary:focus{
+  box-shadow: 0 0 0 25px rgba(255, 255, 255, 0);
+  animation: pulsar 1s;
+}
+.btn-success:hover,.btn-success:focus{
+  box-shadow: 0 0 0 25px rgba(255, 255, 255, 0);
+  animation: pulsar  1s;
+}
+.btn-danger:hover,.btn-danger:focus{
+  box-shadow: 0 0 0 25px rgba(255, 255, 255, 0);
+  animation: pulsardanger  1s;
+}
+.btn-warning:hover,.btn-warning:focus{
+  box-shadow: 0 0 0 25px rgba(255, 255, 255, 0);
+  animation: pulsarwarning  1s;
+}
 @keyframes pulsar{
   0%{
       box-shadow: 0 0 0 0 #1eb588;
+  }
+}
+
+@keyframes pulsardanger{
+  0%{
+      box-shadow: 0 0 0 0 #dc3545;
+  }
+}
+@keyframes pulsarwarning{
+  0%{
+      box-shadow: 0 0 0 0 #ffc107;
   }
 }

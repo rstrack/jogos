@@ -12,7 +12,7 @@ get - listar jogos por título:
 `http://localhost:8080/api/jogos&titulo=[titulo]`
 
 post - criar jogo:
-http://localhost:8080/api/jogos
+`http://localhost:8080/api/jogos`
 
 body:   {
             "titulo": ""

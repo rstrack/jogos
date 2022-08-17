@@ -2,7 +2,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css'
 import Favicon from "react-favicon"
-import imgagemEscolhida from "./images/favicon.png"
+import imagemEscolhida from "./images/cirogames.png"
 import { Routes, BrowserRouter, Route, Link } from 'react-router-dom';
 import ListJogo from './components/listJogo';
 import AddJogo from './components/addJogo';
@@ -21,7 +21,7 @@ function App() {
               <span className="navbar-toggler-icon"></span>
             </button>
             <Link to={'/jogos/list'} className="navbar-brand">
-              <img width="60px" height="60px" src={imgagemEscolhida}/>
+              <img width="120px" height="60px" src={imagemEscolhida}/>
             </Link>
             <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
               <ul className='navbar-nav'>

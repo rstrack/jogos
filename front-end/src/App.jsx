@@ -2,10 +2,12 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css'
 import Favicon from "react-favicon"
+import imgagemEscolhida from "./images/favicon.png"
 import { Routes, BrowserRouter, Route, Link } from 'react-router-dom';
 import ListJogo from './components/listJogo';
 import AddJogo from './components/addJogo';
 import EditJogo from './components/editJogo';
+
 
 function App() {
 
@@ -19,7 +21,7 @@ function App() {
               <span className="navbar-toggler-icon"></span>
             </button>
             <Link to={'/jogos/list'} className="navbar-brand">
-              <img className="img-responsive" width="130px" height="" src="https://lh3.googleusercontent.com/pw/AL9nZEWQlHchilg8nTGwlUSbokoX1w-KzodbMv_CvwxAeEUJ4Wa0YJOFpPMXYTRFDVPN0A2yI7tIY2Gg4pVKaHjV9jV-oexm_4bHyYCAECh5t3LvHe8WIE2ukYURXDYj4xo8DkmgQaJ-YEMtU2fKsxDApLU=w500-h250-no?authuser=0"/>
+              <img width="60px" height="60px" src={imgagemEscolhida}/>
             </Link>
             <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
               <ul className='navbar-nav'>

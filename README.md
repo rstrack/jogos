@@ -15,8 +15,8 @@ post - criar jogo:
 `http://localhost:8080/api/jogos`
 
 body:   {
-            "titulo": ""
-            "valor": ""
+            "titulo": "", 
+            "valor": "", 
             "genero": ""
         }
 
@@ -27,8 +27,8 @@ put - editar dados de um jogo:
 `http://localhost:8080/api/jogos/:id`
 
 body:   {
-            "titulo": ""
-            "valor": ""
+            "titulo": "", 
+            "valor": "", 
             "genero": ""
         }
 

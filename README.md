@@ -6,10 +6,10 @@ Grupo: Gabriel Julek Klazura, Gustavo Chagas Andrade e Rafael Strack
 rotas api:
 
 get - listar todos os jogos:
-http://localhost:8080/api/jogos
+`http://localhost:8080/api/jogos`
 
 get - listar jogos por título:
-http://localhost:8080/api/jogos&titulo=[titulo]
+`http://localhost:8080/api/jogos&titulo=[titulo]`
 
 post - criar jogo:
 http://localhost:8080/api/jogos
@@ -21,10 +21,10 @@ body:   {
         }
 
 get - listar jogo dado o id:
-http://localhost:8080/api/jogos/:id
+`http://localhost:8080/api/jogos/:id`
 
 put - editar dados de um jogo:
-http://localhost:8080/api/jogos/:id
+`http://localhost:8080/api/jogos/:id`
 
 body:   {
             "titulo": ""
@@ -33,8 +33,8 @@ body:   {
         }
 
 delete - remover jogo dado o id:
-http://localhost:8080/api/jogos/:id
+`http://localhost:8080/api/jogos/:id`
 
 delete - remover todos os jogos:
-http://localhost:8080/api/jogos/
+`http://localhost:8080/api/jogos/`
 
